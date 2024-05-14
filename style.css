@@ -6,8 +6,9 @@
 
 
 .Main-container{
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 95vh;
+    border: 2px solid red;
 
 }
 .gallery-container{
