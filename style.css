@@ -4,31 +4,104 @@
     box-sizing: border-box;
 }
 
-
 .Main-container{
     width: 100%;
     min-height: 100vh;
-    border: 2px solid red;
-
 }
+
 .gallery-container{
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
-    border: 2px solid rgb(232, 184, 10);
     min-height: inherit;
 }
 
 .gallery-items{
     flex: 1 0 30%;
-    min-height: 33.3vh;
-    border: 2px solid lightgreen;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    border-radius: 10px;
 }
 
+iframe{
+    display: block;
+    min-height: 100%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.head-foot{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    min-width: 100%;
+    border-image: fill 1 linear-gradient(hsla(0, 96%, 10%, 0.6), hsla(212, 100%, 11%, 0.8));
+    text-transform:uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+}
+
+.item-footer, .item-header{
+    padding:20px;
+    color: rgb(255, 255, 255);
+}
+
+.item-header{
+    margin-top: 45px;
+}
 .item-footer{
     display: flex;
     justify-content: space-between;
+}
+
+.btn{
+    padding: 8px 25px;
+    border-radius: 5px;
+    border-color: white;
+    background: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+    transition: ease;
+}
+
+@media all and (max-width:600px) {
+    .gallery-items{
+        min-width: 100%;
+        min-height: 50vh;
+    }
+    .gallery-container{
+        padding: 15px;
+    }
+}
+
+@media all and (min-width:600px) {
+    .gallery-items{
+        min-width: 45%;
+        min-height: 50vh;
+    }
+}
+
+@media all and (min-width:650px) {
+    .gallery-items{
+        min-width: 45%;
+        min-height: 50vh;
+    }
+}
+
+@media all and (min-width:1200px) {
+    .gallery-items{
+        min-width: 30%;
+    }
 }
